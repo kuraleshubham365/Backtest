@@ -171,7 +171,7 @@ if option=="Fetch data":
             if data['Close'][i-1] >= data['sup'][i-1] and data['Close'][i] < data['sup'][i]:
                 data['sell'][i] = 1
         
-        ig = go.Figure(data=[go.Candlestick(x=data.index, open=data['Open'], high=data['High'], low=data['Low'],
+        fig = go.Figure(data=[go.Candlestick(x=data.index, open=data['Open'], high=data['High'], low=data['Low'],
                 close=data['Close'], increasing_line_color='#ff9900', decreasing_line_color='black', showlegend=False,),])
         layout = go.Layout(plot_bgcolor='#efefef', font_family='Monospace', font_color='#000000', font_size=20,
                 xaxis=dict(rangeslider=dict(visible=False)))
